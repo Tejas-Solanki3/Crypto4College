@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Events - Crypto4College</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Crypto4College</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="wallet.html">Wallet</a>
+            <a href="fees.html">Fees</a>
+            <a href="events.html" class="active">Events</a>
+            <span id="user-greeting"></span>
+            <button id="logout-btn">Logout</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-title">
+            <h2>Campus Events</h2>
+            <p>Browse and purchase tickets for upcoming campus events using CollegeCoin (CC).</p>
+        </section>
+
+        <section id="college-events-list-section">
+            <h3>Available Event Tickets</h3>
+            <div id="college-events-list">
+                <!-- Events will be populated by JS -->
+                <p>Loading available events...</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Your Purchased Tickets</h3>
+            <div id="user-event-ticket-history">
+                <!-- Optional: JS can populate this from USER_PURCHASES_KEY -->
+                <p>You haven't purchased any event tickets yet.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Crypto4College</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/wallet.js"></script> <!-- Needed for updateUserBalance -->
+    <script src="js/transactions.js"></script> <!-- Needed for addTransaction -->
+    <script src="js/smartContracts.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // app.js handles initial auth check and greeting
+            // setupEventsPage(); // This will be called by app.js now
+        });
+    </script>
+</body>
+</html>
