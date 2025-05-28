@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return; // Stop further execution if not logged in and redirecting
         }
     }
-    
+
+    //
     // User greeting for logged-in pages
     const greetingElement = document.getElementById('user-greeting');
     if(greetingElement && getCurrentUser()){
